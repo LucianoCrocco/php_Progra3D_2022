@@ -1,0 +1,2 @@
+C:\xampp\htdocs
+Para abrir desde el XAMPP un documento php le damos un PATH desde htdocs a algun archivo que este dentro de esa carpeta.
