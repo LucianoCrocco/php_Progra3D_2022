@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 Luciano Crocco
 Aplicación No 3 (Obtener el valor del medio)
 Dadas tres variables numéricas de tipo entero $a, $b y $c realizar una aplicación que muestre

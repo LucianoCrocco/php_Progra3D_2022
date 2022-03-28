@@ -9,13 +9,11 @@ se sumaron.
 $acumulador = 0;
 $i = 0;
 
-while($acumulador < 1001){
+while(($acumulador + $i) <= 1000){
     $i++;
     $acumulador += $i;
     echo 'Numero sumado: ', $i;
     echo '<br>';
 }
-$acumulador = $acumulador - $i;
-$i = $i - 1;
 print ("Resultado de la suma $acumulador - Interacciones totales: $i");
 ?>

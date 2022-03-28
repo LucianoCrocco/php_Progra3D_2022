@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 Luciano Crocco
 Aplicación No 2 (Mostrar fecha y estación)
 Obtenga la fecha actual del servidor (función date) y luego imprímala dentro de la página con
@@ -12,20 +12,29 @@ echo "Fecha: ", date("l, j F o"), "<br>";
 echo "Fecha: ", date("d/m/y"), "<br>";
 $fecha = date("j F Y G:i:s a");
 echo "Fecha: ", $fecha, "<br>";
+$dia = (int)date("z");
 
-switch((int)date("m")){
-    case 12: case 1: case 2: case 3:
-        echo "Estacion Verano";
-        break;
-    case 4: case 5: case 6:
+if((int) date("L")){
+    if($dia <= 79 || $dia >= 355){
+        echo 'Estacion Verano';
+    } else if ($dia <= 171){
         echo 'Estacion Otoño';
-        break;
-    case 7: case 8: case 9:
+    } else if($dia <= 263){
         echo 'Estacion Invierno';
-        break;
-    default:
-        print ('Estacion Primavera');
-        break;
+    } else {
+        echo 'Estacion Primavera';
+    }
+} else {
+    if($dia <= 78 || $dia >= 354){
+        echo 'Estacion Verano';
+    } else if ($dia <= 170){
+        echo 'Estacion Otoño';
+    } else if($dia <= 262){
+        echo 'Estacion Invierno';
+    } else {
+        echo 'Estacion Primavera';
+    }
 }
-/* Arreglarlo para tener en cuenta los dias del mes */
+
+
 ?>

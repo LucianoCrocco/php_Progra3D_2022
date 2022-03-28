@@ -7,15 +7,59 @@ por pantalla, el nombre del número que tenga dentro escrito con palabras, para 
 entre el 20 y el 60.
 Por ejemplo, si $num = 43 debe mostrarse por pantalla “cuarenta y tres”.
 */
-$num = 22;
-$baseDecimal = $num[0];
-$siguienteDecimal= $num[1];
+$num = 33;
+$base = (int) ($num / 10);
+$sufijo = (int) (((string)$num)[1]);
+$mensaje = NULL;
 
-$aux = (array)$num;
+switch($base){
+    case 2:
+        $mensaje = "Veinti";
+        break;
+    case 3:
+        $mensaje = "Treinta y ";
+        break;
+    case 4:
+        $mensaje = "Cuarenta y ";
+        break;
+    case 5:
+        $mensaje = "Cincuenta y ";
+        break;
+    case 6:
+        $mensaje = "Sesenta y ";
+        break;
+}
 
-print($aux[0]);
+switch($sufijo){
+    case 1:
+        $mensaje.="uno";
+        break;
+    case 2:
+        $mensaje.="dos";
+        break;
+    case 3:
+        $mensaje.="tres";
+        break;
+    case 4:
+        $mensaje.="cuatro";
+        break;
+    case 5:
+        $mensaje.="cinco";
+        break;
+    case 6:
+        $mensaje.="seis";
+        break;
+    case 7:
+        $mensaje.="siete";
+        break;
+    case 8:
+        $mensaje.="ocho";
+        break;
+    case 9:
+        $mensaje.="nueve";
+        break;
+}
 
-print("$num[0] y $num[1]");
+print("$mensaje");
 
-print("$baseDecimal $siguienteDecimal");
 ?>
