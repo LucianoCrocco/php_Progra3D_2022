@@ -1,0 +1,6 @@
+    Introducción a PHP
+PHP es invisible al navegador porque el que interpreta es el servidor, que no esta en el lado del cliente, por lo tanto el cliente no puede saber que esta pasando o que instruciones se ejecutan en nuestro PHP. 
+
+El codigo fuente compilado es la respuesta traducida del PHP que va a devolver el servidor. Para pasar un poco más en claro quiere decir que las instrucciones del lenguaje PHP se van a compilar a algo que entienda el navegador para renderizar. Por ejemplo un echo 'Hola' se va a compilar a codigo fuente para que el navegador pueda interpretarlo ya que los motores de los navegadores solo ejecutan JS.
+Definicion en la web: PHP is compiled down to an intermediate bytecode that is then interpreted by the runtime engine. The PHP compiler's job is to parse your PHP code and convert it into a form suitable for the runtime engine.
+Source: https://stackoverflow.com/questions/1514676/is-php-compiled-or-interpreted#:~:text=PHP%20is%20compiled%20down%20to,suitable%20for%20the%20runtime%20engine.
