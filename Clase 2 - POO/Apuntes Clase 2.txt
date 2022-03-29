@@ -1,0 +1,15 @@
+Programación Orientada a Objetos
+
+Los parametros default de las funciones pueden ser pisados si le paso un argumento a ese parametro por default, lo pisa. En caso de no pasarle nada queda ese parametro por default.
+
+Las funciones se pasan por valor y no por referencia. Por referencia con un ampersant.
+
+Los include/requiere integran el codigo de ese archivo en mi php actual de manera que quede un solo gran archivo. Ese gran archivo/integración se crea en tiempo de ejecución del script.
+
+No existen las clases estaticas en las declaracioens en PHP. Una clase estatica exista si todos sus miembros son estaticos. En la PPT vemos que podemos acceder a constructores con el ::. Si bien esta mal pq deberiamos usar -> se puede utiliar el :: por lo anteriormente comentado. Lo mismo aplica para la accesibilidad de los metodos en la PPT. Tambien es posible al ser ser dinamico y de tipado debil.
+
+Tipado dinamico: https://stackoverflow.com/questions/7394711/what-is-dynamic-typing
+https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages
+Tipado debil: https://stackoverflow.com/questions/3376252/what-are-the-benefits-and-drawbacks-of-a-weakly-typed-language
+https://www.goodworklabs.com/why-is-php-considered-a-loosely-typed-language-top-3-reasons-for-phps-popularity/#:~:text=You%20just%20need%20to%20assign,is%20a%20loosely%20typed%20language.
+https://www.computerhope.com/jargon/l/looslang.htm
