@@ -1,38 +1,39 @@
 <?php
 include_once "./auto.php";
+include_once "./garage.php";
 
-//Crear dos objetos “Auto” de la misma marca y distinto color.
+//Autos
 $auto = new Auto("Ford", "Azul");
 $auto2 = new Auto("Ford", "Rojo");
-
-//Crear dos objetos “Auto” de la misma marca, mismo color y distinto precio.
 $auto3 = new Auto ("Chevrolet", "Plateado", 12500);
 $auto4 = new Auto ("Chevrolet", "Plateado", 15000);
-
-//Crear un objeto “Auto” utilizando la sobrecarga restante.
 $auto5 = new Auto ("Toyota", "Amarillo", 15000, "25/06/78");
 
-//Utilizar el método “AgregarImpuesto” en los últimos tres objetos, agregando $ 1500 al atributo precio.
-$auto3->AgregarImpuestos(1500);
-$auto4->AgregarImpuestos(1500);
-$auto5->AgregarImpuestos(1500);
+//Garage instanciacion y agregar autos
+$miGarage = new Garage("Estacionamiento pepe");
+$miGarage->Add($auto2);
+$miGarage->Add($auto3);
+$miGarage->Add($auto4);
+$miGarage->Add($auto5);
 
-//Obtener el importe sumado del primer objeto “Auto” más el segundo y mostrar el resultado obtenido.
-print(Auto::Add($auto, $auto2)."<br>");
+//Intento agregar un vehiculo ya contenido
+print($miGarage->Add($auto5)."<br>");
 
-//Comparar el primer “Auto” con el segundo y quinto objeto e informar si son iguales o no.
-if($auto->Equals($auto2) && $auto->Equals($auto5)){
-    echo 'El auto uno es igual al 2 y 5<br>';
-} else {
-    echo 'El auto uno no es igual al 2 y 5<br>';
-}
+//Mostrar garage
+$miGarage->MostrarGarage();
 
-//Utilizar el método de clase “MostrarAuto” para mostrar cada los objetos impares (1, 3, 5)
-$autos = array($auto, $auto2, $auto3, $auto4, $auto5);
-foreach($autos as $k=>$v){
-    if($k % 2 == 0){
-        printf("Auto %d: <br>", $k+1);
-        Auto::MostrarAuto($v);
-    }
-}
+//Equals
+print($miGarage->Equals($auto) ? "Esta en el garage<br>" : "No esta en el garage<br>");
+print($miGarage->Equals($auto2) ? "Esta en el garage<br>" : "No esta en el garage<br>");
+
+//Intento remover un vehiculo ya contenido
+$miGarage->Remove($auto3);
+
+//Intento remover un vehiculo no contenido
+print($miGarage->Remove($auto3)."<br>");
+
+
+//Mostrar garage despues de borrar
+$miGarage->MostrarGarage();
+
 ?>

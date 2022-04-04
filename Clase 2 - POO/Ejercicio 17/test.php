@@ -28,11 +28,14 @@ if($auto->Equals($auto2) && $auto->Equals($auto5)){
 }
 
 //Utilizar el método de clase “MostrarAuto” para mostrar cada los objetos impares (1, 3, 5)
-$autos = array($auto, $auto2, $auto3, $auto4, $auto5);
+Auto::MostrarAuto($auto);
+Auto::MostrarAuto($auto3);
+Auto::MostrarAuto($auto5);
+/*$autos = array($auto, $auto2, $auto3, $auto4, $auto5);
 foreach($autos as $k=>$v){
     if($k % 2 == 0){
         printf("Auto %d: <br>", $k+1);
         Auto::MostrarAuto($v);
     }
-}
+}*/
 ?>
