@@ -1,0 +1,27 @@
+Links de la clase 
+https://www.php.net/manual/es/reserved.variables.server.php 
+https://www.php.net/manual/es/language.variables.superglobals.php
+https://www.php.net/manual/en/function.explode.php
+https://www.php.net/manual/en/function.implode.php
+https://www.php.net/manual/es/function.fgetcsv.php
+https://linuxgx.blogspot.com/2018/09/establecer-permisos-la-carpeta-htdocs.html
+
+
+El manejo de archivos lo vamos a utilizar desde el lado del servidor. 
+Podemos manejar archivos desde el lado del cliente, por ejemplo que el cliente nos envie un archivo al servidor.
+
+Un cliente puede ser un browser, una app del celu, etc. Estos clientes van a hacer peticiones y seran tratadas del lado del servidor.
+El servidor además de devolver en la respuesta datos añade un status de la petición.
+
+Las peticiones trabajan con metodos, llamados verbos (GET, POST, PUT, etc).
+Los metodos GET generalmente se emplea para leer una representación de un recurso, es decir, pedir información.
+Los metodos GET pueden ser bookmarked: https://stackoverflow.com/questions/2176550/get-request-can-be-bookmarked-and-post-can-not-can-anybody-explain-on-this
+
+El caché almacena por así decirlo la respuesta de la peticion para que si el usuario vuelve a generar la misma peticion el servidor no tenga que filtrar/procesar nuevamente esa query. Se puede guardar tanto en el servidor como en el cliente.
+
+La información sensible que puede contener una petición utiliza el método POST.
+
+La implementación del POST, GET, etc y como funciona la API depende del programador backend.
+
+Cookies son informaciones que se guardan en el navegador. No son accesibles para el cliente. Son formas de guardar datos del lado del cliente que a nosotros nos pueden servir para saber cuando expira una sesion, por ejemplo.
+
