@@ -71,21 +71,16 @@ print(Auto::MostrarAuto($auto));
 print(Auto::MostrarAuto($auto3));
 print(Auto::MostrarAuto($auto5));*/
 
-/*
+
 print(Auto::GuardarCSV($auto) ? "Auto guardado<br>" : "Error... Auto no guardado<br>");
 print(Auto::GuardarCSV($auto2) ? "Auto guardado<br>" : "Error... Auto no guardado<br>");
 print(Auto::GuardarCSV($auto3) ? "Auto guardado<br>" : "Error... Auto no guardado<br>");
 print(Auto::GuardarCSV($auto4) ? "Auto guardado<br>" : "Error... Auto no guardado<br>");
-*/
-print(Auto::LeerCSV());
 
-//Auto::CargarAutosArray();
+print(Auto::LeerCSV()."<br>"."<br>");
 
-    /*$autos = array($auto, $auto2, $auto3, $auto4, $auto5);
-foreach($autos as $k=>$v){
-    if($k % 2 == 0){
-        printf("Auto %d: <br>", $k+1);
-        Auto::MostrarAuto($v);
-    }
-}*/
+$arrayAutos = Auto::CargarAutosArray();
+foreach($arrayAutos as $v){
+    print(Auto::MostrarAuto($v)."<br>");
+}
 ?>
