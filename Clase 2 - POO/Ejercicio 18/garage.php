@@ -56,12 +56,13 @@ class Garage {
     }
 
     public function Remove($auto){
-        if(is_a($auto, "Auto") && in_array($auto, $this->_autos)){
+        $retorno = false;
+        if(is_a($auto, "Auto") && $this->Equals($auto)){
             $i = array_search($auto, $this->_autos);
             unset($this->_autos[$i]);
-        } else {
-            return "El auto no se encuentra en el garage";
+            $retorno = true;
         }
+        return $retorno;
     }
 }
 

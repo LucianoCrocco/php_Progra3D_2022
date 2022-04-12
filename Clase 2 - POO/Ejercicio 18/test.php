@@ -27,10 +27,10 @@ print($miGarage->Equals($auto) ? "Esta en el garage<br>" : "No esta en el garage
 print($miGarage->Equals($auto2) ? "Esta en el garage<br>" : "No esta en el garage<br>");
 
 //Intento remover un vehiculo ya contenido
-$miGarage->Remove($auto3);
+print($miGarage->Remove($auto3) ? "Auto removido correctamente<br>" : "El auto no se encuentra en el garage<br>");
 
 //Intento remover un vehiculo no contenido
-print($miGarage->Remove($auto3)."<br>");
+print($miGarage->Remove($auto3) ? "Auto removido correctamente<br>" : "El auto no se encuentra en el garage<br>");
 
 
 //Mostrar garage despues de borrar

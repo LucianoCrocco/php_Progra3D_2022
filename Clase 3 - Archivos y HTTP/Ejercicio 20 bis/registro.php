@@ -9,6 +9,7 @@ switch($_SERVER['REQUEST_METHOD']){
         $email = $_POST['email'];
         $usuario = new Usuario($nombre, $apellido, $email);
         Usuario::GuardarUsuarioCSV($usuario);
+        print('Usuario gurdado correctamente');
         break;
     default:
         echo 'Peticion invalida';

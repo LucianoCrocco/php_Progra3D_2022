@@ -40,9 +40,7 @@ class Auto{
     private string $_marca;
     private string $_color;
     private float $_precio;
-    private string $_fecha; //No lo puse como date pq rompe por todos lados (ultima version), ni setearlo a null, ni con una constante ni nada me solucionan el problema. Agregue una validacion para saber si es una flecha. Un compañero menciono que no se puede instanciar una flecha en el constructor y que precisa una constante, bueno ni con la constante pude.
-    //checkdate();
-    //date("FORMATO-DATE", strtotime("2011-01-07"));
+    private string $_fecha;
 
     public function __construct($marca, $color, $precio = 10000, $fecha = NULL){ //Generar una fecha genericam sacar el null. Precio hacer un rand.
         $this->_marca = $marca;
@@ -64,7 +62,7 @@ class Auto{
 
     public static function MostrarAuto($auto){
         if(is_a($auto, "Auto")){
-            print("$auto->_marca<br>$auto->_color<br>$auto->_precio<br>$auto->_fecha<br>");
+            return "$auto->_marca, $auto->_color, $auto->_precio, $auto->_fecha";
         }
     }
     
@@ -88,11 +86,6 @@ class Auto{
         }
         return $retorno;
     }
-
-    /*
-    public static function TEST(){
-        print("TEST");
-    }*/
 }
 
 

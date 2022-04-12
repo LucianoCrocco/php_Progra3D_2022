@@ -1,0 +1,9 @@
+archivo va a ser el name que le demos al input form.
+name va a ser el nombre/s de los archivo/s.
+
+Si abrimos una sesion en una pagina y luego en otra abrimos de nuevo va a buscar una sesion ya iniciada a traves de todo el sitio web y va a compartir la informacion.
+La finalidad de las variables de sesion es tener almacenada temporalmente informacion del cliente durante su sesion, con la clave:valor poder relacionarlo para realizar ciertas operaciones y mantener guardada informacion temporal con ese id.
+
+Las cookies permiten al servidor escribir del lado del cliente informacion muy acotada. Esa cookie va a viajar tanto en la ida y vuelta de peticiones.
+Por ejemplo podriamos guardar el id de la sesion para siempre tener el mismo ID.
+Las cookies pueden ser compartidas entre paginas.
