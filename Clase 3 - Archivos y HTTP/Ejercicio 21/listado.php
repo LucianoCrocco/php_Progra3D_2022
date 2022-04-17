@@ -2,6 +2,9 @@
 
 require_once './usuario.php';
 
+$array = Usuario::CargarUsuariosArrayCSV();
+$output = Usuario::GenerarListaArrayUsuarios($array);
+
 switch($_SERVER['REQUEST_METHOD']){
     case 'GET':
         $tipo = $_GET['tipo'];
@@ -14,7 +17,7 @@ switch($_SERVER['REQUEST_METHOD']){
         }
         break;
     default:
-        echo 'Peticion dsaad';
+        echo 'Peticion Invalida';
         break;
 }
 ?>

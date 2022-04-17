@@ -86,13 +86,14 @@ class Garage {
                 while(!feof($archivo)){
                     $mensaje = fgets($archivo);
                     if(!empty($mensaje)){
+                        $mensaje = str_replace("\n", "", $mensaje);
                         if(str_contains($mensaje, "->")){
                             $mensaje = str_replace("-> ", "", $mensaje);
-                            $auxString = explode(",", $mensaje);
+                            $auxString = explode(", ", $mensaje);
                             $auto = new Auto($auxString[0],$auxString[1],$auxString[2],$auxString[3]);
                             array_push($array, $auto);
                         } else {
-                            $auxString = explode(",", $mensaje);
+                            $auxString = explode(", ", $mensaje);
                             $garage = new Garage($auxString[0],$auxString[1]);
                         }
                     }

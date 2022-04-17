@@ -85,6 +85,7 @@ class Auto{
             while(!feof($archivo)){
                 $mensaje = fgets($archivo);
                 if(!empty($mensaje)){
+                    $mensaje = str_replace("\n", "", $mensaje);
                     $auxString = explode(", ", $mensaje);
                     $auto = new Auto($auxString[0],$auxString[1],$auxString[2],$auxString[3]);
                     array_push($array, $auto);
