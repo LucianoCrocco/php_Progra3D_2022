@@ -1,0 +1,62 @@
+Base de datos SQL -> Visto en 2do
+
+https://youtu.be/JP8RF8uYwU0
+-No existe CTRL-Z ni recuperar los datos.
+-Puedo tener un campo autoincremental, si es asi no tengo que pasarle un valua ya que es una columna que la maneja el IDE de SQL.
+-SQL busca la coincidencia de tipos, puede que haya un error con el nombre de un campo de la tabla y pase igual (ej: M.Nombre (string) C.Apellido (string) pasa igual).
+
+------------------------------------
+
+	Introduccion a manejo de tablas SQL - Seleccion y consulta.
+
+SELECT * FROM (TABLA) | * -> pido todos los campos que voy a mostrar, tambien puedo pedir campos especificos de la tabla poniendo el/los nombres. ej(SELECT nombre, edad, idVeterinario FROM Mascotas)
+
+WHERE (CONDICION) | Filtro los datos que voy a pedirle a la tabla (ej: "campo" > X -> WHERE Mascotas.edad > 4)
+
+AND (CONDICION) -> El AND me permite agregar una condicion (ej: WHERE Mascotas.edad > 4 AND Mascotas.patas > 2).
+
+LIKE (CONDICION) -> Segun como lo apliquemos (ej: WHERE Ciudadanos.nombre LIKE 'Luciano') va a buscar y filtrar lo que coincida en la condicion. | Algunas condiciones para pasarle a nuestro LIKE ['_'(-> cualquier caracter, en esa posicion)] | [%(->muchos, uno, cero: cualquier caracter.)], se pueden combinar.
+
+IN (CONDICION) -> Le pasamos una lista (ej: WHERE Ciudadanos.nombre IN ('Luciano', 'Silvestre', 'Mal')) y nos trae todas las coincidencias que encuentre dentro de la tabla | No podemos aplicar las condiciones del like.
+
+BETWEEN (CONDICION) -> Busca y nos trae la tabla entre dos valores que le pasemos (ej: WHERE Mascotas.edad BETWEEN 3 AND 8) 
+
+ORDER BY (CONDICION) -> Podemos ordenar de manera ASC o DSC (ej: ORDER BY Mascotas.nombre ASC) - (ej2: ORDER BY Mascotas.idVeterinario DESC, Mascotas.nombre ASC)| Por defecto es ASC
+
+MAX - MIN - AVG - GETDATE -> Podemos funciones con las cuales podemos seleccionar el maximo o el minimo de un atributo de la tabla, con el AVG podemos ver el promedio de un atributo, con el GateDate podemos ver la fecha actual (ej: SELECT MAX(Mascotas.edad)) - (ej2: SELECT MIN(Mascotas.edad) - (ej3: SELECT AVG(Mascotas.edad) - (ej4: SELECT *, GETDATE())
+
+------------------------------------
+
+	Relacion entre tablas en SQL
+
+- No hacer un SELECT x, y FROM X, Y, y relacionarlo con el WHERE. El Where FILTRA informacion y va a tardar mucho mas en tiempo, totalmente ineficiente. El INNERJOIN directamente nos va a traer el dato que le pedimos, no filtra dato x dato como el WHERE. 
+- Podemos agregar alias cuando hacemos el FROM (ej: FROM Mascotas M | M es el alias) (ej2: FROM Mascotas AS M)
+- El INNERJOIN lo podemos pensar como la INTERSECCION de conjuntos.
+
+INNER JOIN -> Nos permite relacionar dos o más tablas, toma la INTERSECCION de esos conjuntos(tablas) relacionadas. (ej: SELECT * FROM Mascotas INNER JOIN Veterinarios ON "Condicion") (El = es el == que se utiliza normalmente).
+
+ON -> La condicion que relaciona las dos tablas. (ej: SELECT Mascotas.nombre, Mascotas.edad, Mascotas.idDuenio, Veterinarios.nombre, Veterinario.apellido FROM Mascotas INNER JOIN Veterinarios ON "Mascotas.idVeterinario = Veterinario.id")
+
+CONCATENACION DE DOS COLUMNAS DE UNA TABLA Y DARLE NOMBRE: Podemos concatenar dos tablas bajo un mismo nombre de la siguiente manera: (ej: SELECT Mascotas.nombre, Mascotas.edad, Mascotas.idDuenio, Veterinarios.nombre + ' ' + Veterinario.apellido AS 'NOMBRE' FROM Mascotas INNER JOIN Veterinarios ON "Mascotas.idVeterinario = Veterinario.id") | Si uso '' el AS no es necesario en teoria.
+
+LEFT JOIN -> Toma la "izquierda" y la interseccion de las tablas que se relacionan (FROM Mascota (izq) LEFT JOIN Veterinarios (derecha))
+RIGHT JOIN -> Toma la "derecha" y la interseccion de las tablas que se relacionan (FROM Mascota (izq) RIGHT JOIN Veterinarios (derecha))
+
+------------------------------------
+
+	Modificacion, se lo conoce como comandos/sentencias SQL
+
+- INSERT | Agrego datos
+INSERT INTO (Tabla) (Valores tiene la tabla) VALUE (Valores de que se insertan en la tabla) ->  Inserta en la tabla una fila con los datos que le pase en VALUE. Agregando una ',' puedo agregar mas de una instancia. 
+
+INSERT INTO (Tabla) (Valores tiene la tabla) select (Valores a insertar de la otra tabla) FROM (esa "otra tabla" a insertar) -> Inserto los datos de una tabla a mi tabla actual.
+
+DELETE | Elimino datos
+DELETE FROM (TABLA) -> Elimino todo. No reinicia los autoincrementables.
+DELETE FROM (TABLA) WHERE (Condicion) -> Elimino todo lo que la condicion encuentre
+
+UPDATE | Actualizo datos
+UPDATE (TABLA) SET (ALGUN VALOR DE LA TABLA) -> Modifico todo.
+UPDATE (TABLA) SET (ALGUN VALOR DE LA TABLA) WHERE (ALGUN VALOR DE LA TABLA) -> Cambio con el set los valores que encuentre con el WHERE, con la "," puedo agregar mas campos a actualizar (ej: UPDATE Mascotas SET nombre = 'Marty' WHERE id = 8)
+
+TRUNCATE TABLE (TABLA) -> Borra y "reinicia" la tabla totalemente de 0.

@@ -2,9 +2,6 @@
 
 require_once './usuario.php';
 
-$array = Usuario::CargarUsuariosArrayCSV();
-$output = Usuario::GenerarListaArrayUsuarios($array);
-
 switch($_SERVER['REQUEST_METHOD']){
     case 'GET':
         $tipo = $_GET['tipo'];
