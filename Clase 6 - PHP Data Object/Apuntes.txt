@@ -1,0 +1,8 @@
+Las sentencias preparadas las compila SQL. Es algo de la base de dato que queda en una especie de "cache" para no tener que barrer la base de datos por cada consulta y realiza un pre-compilado de las instrucciones para ahorrar tiempo, performance, etc.
+
+El ? en las ppt significa que son parametros opcionales.
+
+Cuando en una query PDOStatemant veo un ? es otra opcion antes que poner un ':ALGO'. La referencia posicional arranca a partir de 1.
+
+bindParam pasa por referencia.
+bindValue para por valor al momento que se le pasa.

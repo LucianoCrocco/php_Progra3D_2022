@@ -23,6 +23,8 @@ class Usuario {
         if(is_a($usuario, "Usuario")){
             $archivo = fopen("usuarios.csv", "a+");
             if($archivo != FALSE){
+                $mensaje = Usuario::MostrarUsuario($usuario);
+                $mensaje = str_replace(", ",",",$mensaje);
                 $retorno = fputs($archivo, Usuario::MostrarUsuario($usuario).PHP_EOL);
                 fclose($archivo);
             }
