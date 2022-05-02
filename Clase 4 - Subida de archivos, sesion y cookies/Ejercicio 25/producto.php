@@ -47,11 +47,11 @@ class Producto {
 
     public static function GuardarProdutosCSV($productos){
         $retorno = false;
-        if(is_a($producto, "Producto") && is_array($producto)){
+        if (is_array($productos)){
             $archivo = fopen("productos.csv", "w");
             if($archivo != FALSE){
                 foreach($productos as $v){
-                    $retorno = fputs($archivo, Producto::MostrarProducto($producto).PHP_EOL);
+                    $retorno = fputs($archivo, Producto::MostrarProducto($v).PHP_EOL);
                 }
                 fclose($archivo);
             }
@@ -68,7 +68,7 @@ class Producto {
                 if(!empty($mensaje)){
                     $mensaje = str_replace("\n","",$mensaje);
                     $auxArray = explode(", ", $mensaje);
-                    $producto = new Producto($auxArray[0], $auxArray[1], $auxArray[2], $auxArray[3], $auxArray[4], $auxArray[5]);
+                    $producto = new Producto($auxArray[1], $auxArray[2], $auxArray[3], $auxArray[4], $auxArray[5]);
                     array_push($array, $producto); 
                 }
             }
@@ -77,16 +77,16 @@ class Producto {
         return $array;
     }
 
-    public function Equals($codigoDeBarras){
-        if(is_int($codigoDeBarras) && $this->_codigoDeBarras == $codigoDeBarras){
+    public function Equals($nombre){
+        if($this->_nombre == $nombre){
             return true;
         }
         return false;
     }
 
     private static function ExisteProducto($array, $producto){
-        for($i = 0; $i < $array.length; $i++){
-            if($array[$i]->Equals($producto)){
+        for($i = 0; $i < count($array); $i++){
+            if($array[$i]->Equals($producto->_nombre)){
                 return $i;
             }
         }

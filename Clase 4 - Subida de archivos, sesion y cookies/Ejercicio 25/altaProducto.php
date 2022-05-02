@@ -2,11 +2,21 @@
 
 include_once './producto.php';
 
-try {
-    $producto = new Producto(123456, "Uvas", "solido", 1, 20000);
-    
-} catch (Exception $ex){
-    print($ex->getMessage());
+switch($_SERVER["REQUEST_METHOD"]){
+    case 'POST':
+        try {
+            $producto = new Producto($_POST["codigo_de_barras"], $_POST["nombre"], $_POST["tipo"], $_POST["stock"], $_POST["precio"]);
+            $mensaje = Producto::ManejadorProdcutos($producto);
+            echo $mensaje;
+        } catch (Exception $ex){
+            echo "No se pudo hacer";
+        }        
+        break;
+
+    default:
+        echo "Peticion no valida";
+        break;
 }
+
 
 ?>

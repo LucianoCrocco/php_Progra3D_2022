@@ -2,18 +2,24 @@
 
 require_once './usuario.php';
 
+
 switch($_SERVER["REQUEST_METHOD"]){
     case 'POST':
-        $arrayUsuarios = Usuario::CargarUsuariosArrayJSON();
-        $nombre = $_POST['nombre'];
-        $apellido = $_POST['apellido'];
-        $email = $_POST['email'];
-        $usuario = new Usuario($nombre, $apellido, $email);
-        $destino = "./Usuario/Fotos/".$usuario->_id."-".$_FILES["archivo"]["name"];
-        move_uploaded_file($_FILES["archivo"]["tmp_name"], $destino);
-        array_push($arrayUsuarios, $usuario);
-        Usuario::GuardarUsuariosJSON($arrayUsuarios);
-        echo('Usuario registrado, foto almacenada');
+        try {
+            $arrayUsuarios = Usuario::CargarUsuariosArrayJSON();
+            $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_FILES["archivo"]["name"]);
+
+            $destino = "./Usuario/Fotos/".$usuario->getFoto();
+            $origen = $_FILES["archivo"]["tmp_name"];
+            
+            Usuario::GuardarFotos($origen, $destino);
+            
+            array_push($arrayUsuarios, $usuario);
+            Usuario::GuardarUsuariosJSON($arrayUsuarios);
+            echo('Usuario registrado, foto almacenada');
+        } catch(Exception $ex){
+            print($ex->getMessage());
+        }
         break;
     default:
         echo 'Peticion no valida';

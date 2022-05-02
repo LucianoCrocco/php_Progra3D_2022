@@ -51,7 +51,12 @@ class Usuario implements JsonSerializable{
             throw new Exception("Foto invalida");
         }
     }
-
+    public function getNombre(){
+        return $this->_nombre;
+    }
+    public function getApellido(){
+        return $this->_apellido;
+    }
     public function getFoto(){
         return $this->_foto;
     }
@@ -121,6 +126,21 @@ class Usuario implements JsonSerializable{
     public static function GuardarFotos($temporal, $destino){
         if(!move_uploaded_file($temporal, $destino)){
             throw new Exception("Error al mover el archivo.");
+        }
+    }
+
+    public static function ListarUsuariosHTML($array){
+        if(is_array($array)){        
+            $mensaje = "<ul>";
+            $append = "";
+            foreach($array as $v){
+                $append = "<li>".$v->getNombre().", ".$v->getApellido().", "."<img src='./Usuario/Fotos/".$v->getFoto()."' height=100px"."</li>".PHP_EOL;
+                $mensaje = $mensaje.$append;
+            }
+        
+            return $mensaje."</ul>";
+        } else {
+            throw new Exception("Se esperaba un array de usuarios");
         }
     }
 }
