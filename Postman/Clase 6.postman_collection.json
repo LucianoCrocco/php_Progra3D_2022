@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "b1ae8123-03ff-4f27-b0f4-7f0e8369a5a5",
+		"name": "Clase 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ejercicio 27",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Luciano",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Crocco",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "123456790",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "Luciano@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "localidad",
+							"value": "CABA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%206%20-%20PHP%20Data%20Object/Ejercicio%2027/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%206%20-%20PHP%20Data%20Object",
+						"Ejercicio%2027",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

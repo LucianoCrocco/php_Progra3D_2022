@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "e0d89061-bb44-4006-9ebc-23a52bed5d0e",
+		"name": "Clase 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ejercicio 23 - 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Luciano",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Crocco",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "luciano@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/home/luciano/Imágenes/Fondos de escritorio/wallhaven-9m5qkd.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies/Ejercicio%2023/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies",
+						"Ejercicio%2023",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 23 - 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Matias",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Gonzalez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "matias@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/home/luciano/Imágenes/Fondos de escritorio/wallhaven-2emxoy.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies/Ejercicio%2023/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies",
+						"Ejercicio%2023",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 23 - 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Juan",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Perez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "juan@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/home/luciano/Imágenes/Fondos de escritorio/wallhaven-9m5qkd.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies/Ejercicio%2023/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies",
+						"Ejercicio%2023",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 24",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies/Ejercicio%2024/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies",
+						"Ejercicio%2024",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 25",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo_de_barras",
+							"value": "666449",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Uvas",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "solido",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "2000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies/Ejercicio%2025/altaProducto.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies",
+						"Ejercicio%2025",
+						"altaProducto.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 25 - 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo_de_barras",
+							"value": "555219",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Peras",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "solido",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "5000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies/Ejercicio%2025/altaProducto.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%204%20-%20Subida%20de%20archivos,%20sesion%20y%20cookies",
+						"Ejercicio%2025",
+						"altaProducto.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

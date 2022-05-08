@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "50abe69a-ab39-4365-a8fc-33331bf00510",
+		"name": "Clase 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET -> Ejemplo HTTP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%203%20-%20Archivos%20y%20HTTP/Ejemplo%20HTTP/peticion.php?nombre=luciano&apellido=crocco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%203%20-%20Archivos%20y%20HTTP",
+						"Ejemplo%20HTTP",
+						"peticion.php"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "luciano"
+						},
+						{
+							"key": "apellido",
+							"value": "crocco"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST -> Ejemplo HTTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "luciano",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "crocco",
+							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%203%20-%20Archivos%20y%20HTTP/Ejemplo%20HTTP/peticion.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%203%20-%20Archivos%20y%20HTTP",
+						"Ejemplo%20HTTP",
+						"peticion.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST -> Ejercicio 20 bis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Luciano",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Crocco",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "luciano@mail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%203%20-%20Archivos%20y%20HTTP/Ejercicio%2020%20bis/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%203%20-%20Archivos%20y%20HTTP",
+						"Ejercicio%2020%20bis",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET -> Ejercicio 21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%203%20-%20Archivos%20y%20HTTP/Ejercicio%2021/listado.php?tipo=Usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%203%20-%20Archivos%20y%20HTTP",
+						"Ejercicio%2021",
+						"listado.php"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "Usuarios"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST -> Ejercicio 22",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mrenon5@topsy.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "CpjSMor",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%203%20-%20Archivos%20y%20HTTP/Ejercicio%2022/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%203%20-%20Archivos%20y%20HTTP",
+						"Ejercicio%2022",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
