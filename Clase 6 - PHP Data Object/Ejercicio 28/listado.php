@@ -4,12 +4,15 @@
     require_once './servidor.php';
 
     switch($_SERVER["REQUEST_METHOD"]){
-        case 'POST':
+        case 'GET':
             try {
-                if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['clave']) && isset($_POST['mail']) && isset($_POST['localidad'])){
-                    $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['clave'], $_POST['mail'], $_POST['localidad']);
+                if(key($_GET) == 'Usuarios'){
                     $servidor = new Servidor();
-                    $servidor->AgregarUsuario($usuario);
+
+                    $matrizSQL = $servidor->BuscarTodosUsuarios();
+                    $mensaje = Usuario::ListarUsuariosHTMLSQL($matrizSQL);
+
+                    echo $mensaje;
                 } else {
                     echo 'Parametros de la petición no validos';
                 }

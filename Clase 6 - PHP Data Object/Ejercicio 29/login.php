@@ -6,10 +6,10 @@
     switch($_SERVER["REQUEST_METHOD"]){
         case 'POST':
             try {
-                if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['clave']) && isset($_POST['mail']) && isset($_POST['localidad'])){
-                    $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['clave'], $_POST['mail'], $_POST['localidad']);
+                if(key($_GET) == 'Usuarios'){
                     $servidor = new Servidor();
-                    $servidor->AgregarUsuario($usuario);
+                    $matrizSQL = $servidor->BuscarTodosUsuarios();
+                    echo Usuario::BuscarUsuariosExistenteSQL($_POST["mail"], $_POST["clave"], $matrizSQL) ? "Existe el usuario" : "No existe el usuario";
                 } else {
                     echo 'Parametros de la petición no validos';
                 }

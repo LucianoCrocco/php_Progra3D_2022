@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "dde208b8-d8c9-4645-8828-5adc44d8cb96",
+		"name": "Clase 8 - Parcial - Parte 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Carga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Doble Queso",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Doble",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/xampp/htdocs/Programacion_3/Clase 8 - Parcial/hamburgesa.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%208%20-%20Parcial/Parte%201/?Carga",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%208%20-%20Parcial",
+						"Parte%201",
+						""
+					],
+					"query": [
+						{
+							"key": "Carga",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Doble Queso",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Doble",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%208%20-%20Parcial/Parte%201/?Consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%208%20-%20Parcial",
+						"Parte%201",
+						""
+					],
+					"query": [
+						{
+							"key": "Consultar",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "?Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "luciano@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Doble Queso",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Doble",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/xampp/htdocs/Programacion_3/Clase 8 - Parcial/hamburgesa.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion_3/Clase%208%20-%20Parcial/Parte%201/?Venta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion_3",
+						"Clase%208%20-%20Parcial",
+						"Parte%201",
+						""
+					],
+					"query": [
+						{
+							"key": "Venta",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

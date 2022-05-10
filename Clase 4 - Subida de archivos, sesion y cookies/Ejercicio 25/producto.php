@@ -102,13 +102,13 @@ class Producto {
         if($index == -1){
             Producto::AgregarProductoLista($arrayProductos, $producto);
         } else {
-            Producto::ManejadorStock($arrayProductos, $producto);
+            Producto::ManejadorStock($arrayProductos, $producto, $index);
             $mensaje = "Actualizado";
         }
         return $mensaje;
     }
 
-    private static function ManejadorStock($arrayProductos, $producto){
+    private static function ManejadorStock($arrayProductos, $producto, $index){
         $arrayProductos[$index]->_stock += $producto->_stock;
         Producto::GuardarProdutosCSV($arrayProductos);
     }
