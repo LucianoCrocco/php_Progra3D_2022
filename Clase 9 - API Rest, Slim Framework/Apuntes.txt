@@ -1,6 +1,9 @@
 Slim es un framework que utiliza Synphony como base.
 https://developer.mozilla.org/es/docs/Glossary/Preflight_request -> Antes de hacer las peticiones hacen una peticion previa para validar ciertas cosas.
 https://developer.mozilla.org/es/docs/Glossary/MVC -> Modelo MVC que vamos a ver.
+https://github.com/LucianoCrocco/3D-slim-php-mysql-heroku -> Base del Slim para la cursada
+https://slim-php-heroku-facultad.herokuapp.com/app -> Pagina web del despliegue
 Composer de php = npm de Node
 Un HTACCESS es un archivo que contiene un conjunto de reglas del enrutamiento de nuestra aplicación. Da los puntos de entrada para navegar correctamente.
 Con el use podes usar un namespace, el use lo trae el framework para poder utilizar lo básico. El requiere del autoload son tambien funciones basicas para arrancar slim.
+php -S localhost:666 -t app
